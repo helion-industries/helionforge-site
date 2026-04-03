@@ -579,3 +579,258 @@ footer { position: relative; z-index: 1; }
 .section { border-top: 1px solid var(--border); }
 .section:first-child { border-top: none; }
 .hero-section { border-top: none; }
+
+/* ============================================
+   SCI-FI OVERHAUL — 2026-04-04
+   ============================================ */
+
+/* Deeper background + stronger glow */
+:root {
+  --glow: rgba(243, 106, 33, 0.6);
+  --glow-soft: rgba(243, 106, 33, 0.12);
+}
+
+body {
+  background:
+    radial-gradient(ellipse 60% 40% at 75% 8%, rgba(243, 106, 33, 0.18), transparent 60%),
+    radial-gradient(ellipse 40% 30% at 10% 80%, rgba(243, 106, 33, 0.06), transparent 50%),
+    linear-gradient(180deg, #08090b 0%, #0a0b0e 40%, #0F0F0F 100%);
+}
+
+/* Stronger grid overlay */
+body::before {
+  background-image:
+    linear-gradient(rgba(243, 106, 33, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 106, 33, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0) 100%);
+  opacity: 0.7;
+}
+
+/* Gradient headline text */
+.hero-headline {
+  background: linear-gradient(135deg, #f0ede8 0%, #e7e1d8 40%, #c8bfb0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-headline .text-orange {
+  background: linear-gradient(90deg, #F97316, #ff9a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Eyebrow — terminal style */
+.eyebrow {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+.eyebrow::before { content: "// "; opacity: 0.5; }
+
+/* Stat chips — clean pill style with glow */
+.stat-chips span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.stat-chips span::after { color: rgba(243,106,33,0.3); }
+
+/* Product cards — sci-fi border glow */
+.product-card {
+  background: linear-gradient(135deg, rgba(23,24,27,0.9) 0%, rgba(18,19,22,0.95) 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(243,106,33,0.03), transparent 50%);
+  pointer-events: none;
+}
+.product-card:hover {
+  border-color: rgba(243,106,33,0.35);
+  box-shadow: 0 0 0 1px rgba(243,106,33,0.15), 0 20px 48px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.product-card.featured {
+  border-color: rgba(243,106,33,0.4);
+  box-shadow: 0 0 0 1px rgba(243,106,33,0.2), 0 0 48px rgba(243,106,33,0.06), 0 20px 48px rgba(0,0,0,0.5);
+}
+
+/* Product h3 — Space Grotesk */
+.product-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Badge for featured */
+.product-badge {
+  background: linear-gradient(90deg, #F97316, #ff8a3d);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 12px rgba(243,106,33,0.4);
+}
+
+/* Stats — larger, bolder */
+.stats-panel {
+  background: linear-gradient(135deg, rgba(18,19,22,0.8) 0%, rgba(23,24,27,0.7) 100%);
+  border: 1px solid rgba(243,106,33,0.12);
+  box-shadow: 0 0 0 1px rgba(243,106,33,0.06), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 64px;
+  background: linear-gradient(135deg, #F97316, #ff9a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 24px rgba(243,106,33,0.3));
+}
+.stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-deep);
+}
+
+/* Service cards — left accent glow */
+.service-card {
+  background: linear-gradient(135deg, rgba(23,24,27,0.8), rgba(18,19,22,0.9));
+  border: 1px solid rgba(255,255,255,0.05);
+  border-left: 2px solid rgba(243,106,33,0.15);
+}
+.service-card:hover {
+  border-left-color: var(--accent);
+  background: linear-gradient(135deg, rgba(243,106,33,0.04), rgba(18,19,22,0.9));
+  box-shadow: -4px 0 24px rgba(243,106,33,0.1);
+  transform: translateX(4px);
+}
+.service-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+}
+.service-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+/* Process steps */
+.process-step {
+  background: linear-gradient(135deg, rgba(18,19,22,0.7), rgba(23,24,27,0.8));
+  border: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
+}
+.process-step::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(243,106,33,0.3), transparent);
+}
+.process-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(243,106,33,0.2);
+  letter-spacing: -0.02em;
+}
+.process-step h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* Buttons — glow on primary */
+.btn-primary {
+  background: linear-gradient(135deg, #F97316, #f08020);
+  box-shadow: 0 0 20px rgba(243,106,33,0.25), 0 4px 12px rgba(0,0,0,0.3);
+  letter-spacing: 0.01em;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff8330, #F97316);
+  box-shadow: 0 0 32px rgba(243,106,33,0.4), 0 6px 16px rgba(0,0,0,0.4);
+  transform: translateY(-1px);
+}
+.btn-outline {
+  border-color: rgba(255,255,255,0.12);
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.btn-outline:hover {
+  border-color: rgba(243,106,33,0.5);
+  color: var(--accent);
+  box-shadow: 0 0 16px rgba(243,106,33,0.1);
+}
+
+/* Section alt — subtle differentiation */
+.section-alt {
+  background: linear-gradient(180deg, rgba(10,11,14,0.6) 0%, rgba(12,13,16,0.8) 100%);
+}
+
+/* Contact form — terminal feel */
+.contact-form-wrap {
+  background: linear-gradient(135deg, rgba(12,13,16,0.9), rgba(18,19,22,0.85));
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 1px rgba(243,106,33,0.05), 0 24px 64px rgba(0,0,0,0.5);
+}
+.form-group input,
+.form-group textarea {
+  background: rgba(8,9,11,0.8);
+  border-color: rgba(255,255,255,0.06);
+  color: var(--text);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(243,106,33,0.4);
+  box-shadow: 0 0 0 3px rgba(243,106,33,0.08);
+}
+.form-group label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-deep);
+}
+
+/* Nav — sharper */
+.site-header {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(8,9,11,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-nav a { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(180deg, rgba(8,9,11,0.95), rgba(5,6,8,1));
+  border-top: 1px solid rgba(243,106,33,0.08);
+}
+.footer-brand { letter-spacing: 0.06em; }
+.footer-col h4 { font-family: 'Space Grotesk', sans-serif; }
+
+/* Section h2 — gradient */
+.section-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  background: linear-gradient(135deg, #f0ede8, #c8bfb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
