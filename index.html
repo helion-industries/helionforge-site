@@ -3,24 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Helion Forge — Practical software for teams that need traction, not theater.</title>
-    <meta
-      name="description"
-      content="Helion Forge builds practical software systems for teams that need traction fast — internal tools, AI workflows, and launchable MVPs."
-    />
-    <meta name="theme-color" content="#0E0E10" />
+    <title>Helion Forge — Practical software for agencies and MSPs.</title>
+    <meta name="description" content="Client reporting, MSP onboarding, and proposal tools built for agencies. 14-day free trial. No credit card required." />
+    <meta name="theme-color" content="#0F0F0F" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="site-header container">
-        <a class="brand" href="#top" aria-label="Helion Forge home">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Helion Forge home">
           <img src="assets/helion-forge-logo.png" alt="Helion Forge" />
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
@@ -30,285 +24,263 @@
           <a href="#contact">Contact</a>
           <a href="https://portal.helionforge.com" class="nav-login-btn">Client Login</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main id="top">
-        <section class="hero container panel panel-hero">
-          <div class="hero-copy">
-            <p class="eyebrow">WHERE INTELLIGENCE BUILDS</p>
-            <h1>Practical software for teams that need traction, not theater.</h1>
-            <p class="hero-text">
-              Helion Forge helps ambitious teams design, build, and launch internal tools, AI workflows,
-              and product-ready systems — fast, clean, and with a bias toward real-world utility.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#contact">Book a build call</a>
-              <a class="button button-secondary" href="#process">See how we work</a>
-            </div>
-            <ul class="hero-points" aria-label="Helion Forge strengths">
-              <li>Fast scoping</li>
-              <li>Senior-level execution</li>
-              <li>Built to ship, not stall</li>
-            </ul>
-          </div>
+    <main>
 
-          <aside class="hero-card panel panel-inner">
-            <p class="eyebrow">BUILD PROFILE</p>
-            <h2>Practical. Fast. Systematic.</h2>
-            <p>
-              We build the systems your business actually needs: internal tools, AI workflows, and tight MVPs
-              that can survive contact with reality.
-            </p>
-            <ul class="stack-list">
-              <li>Clear scope before code</li>
-              <li>Working software in weeks, not quarters</li>
-              <li>Builder-led decisions with product sense</li>
-              <li>Designed to be maintained, extended, and monetized</li>
-            </ul>
-          </aside>
-        </section>
+      <!-- HERO -->
+      <section class="hero-section">
+        <div class="container hero-inner">
+          <p class="eyebrow">WHERE INTELLIGENCE BUILDS</p>
+          <h1 class="hero-headline">Practical software for agencies and MSPs.<br><span class="text-orange">Built to ship.</span></h1>
+          <p class="hero-sub">We build the tools your team actually uses — client reporting, onboarding workflows, proposal copilots. Live products, not vaporware.</p>
+          <div class="hero-actions">
+            <a href="/products.html" class="btn btn-primary">See Our Products →</a>
+            <a href="#contact" class="btn btn-outline">Book a Call</a>
+          </div>
+          <div class="stat-chips">
+            <span>⚡ 3 live products</span>
+            <span>🗓 14-day free trial</span>
+            <span>💳 $0 to start</span>
+          </div>
+        </div>
+      </section>
 
-        <section class="value-strip container">
-          <div>
-            <p class="eyebrow">WHAT YOU GET</p>
-            <h2>Builder-led systems with practical ROI.</h2>
-          </div>
-          <div class="value-grid">
-            <div>
-              <strong>Clear scope</strong>
-              <span>before complexity shows up.</span>
-            </div>
-            <div>
-              <strong>Usable software</strong>
-              <span>that helps operators move faster.</span>
-            </div>
-            <div>
-              <strong>Product thinking</strong>
-              <span>baked in from the first pass.</span>
-            </div>
-          </div>
-        </section>
+      <!-- PRODUCTS -->
+      <section class="section" id="products">
+        <div class="container">
+          <p class="eyebrow text-center">WHAT WE BUILD</p>
+          <h2 class="section-h2 text-center">Software that earns its keep.</h2>
+          <div class="product-grid">
 
-        <section class="section container" id="services">
-          <div class="section-heading">
-            <p class="eyebrow">FOR TEAMS WITH REAL OPERATIONAL PAIN</p>
-            <h2>We work best with founders and operators who are done duct-taping critical workflows together.</h2>
-          </div>
-          <div class="audience-grid">
-            <article class="panel panel-card">
-              <h3>Lean startups</h3>
-              <p>Building internal leverage before hiring a bigger team.</p>
+            <article class="product-card">
+              <div class="product-icon">📊</div>
+              <h3>Client Reporting Copilot</h3>
+              <p>AI-powered performance reports your clients actually read. Import data, generate insights, share in minutes.</p>
+              <div class="product-price">From <strong>$49</strong>/mo</div>
+              <a href="https://app.helionforge.com/pricing.html" class="btn btn-primary btn-sm">Try Free →</a>
             </article>
-            <article class="panel panel-card">
-              <h3>Service businesses</h3>
-              <p>Needing better workflows, automation, and visibility across operations.</p>
-            </article>
-            <article class="panel panel-card">
-              <h3>Product-minded operators</h3>
-              <p>Validating ideas with real users before overinvesting in a bigger build.</p>
-            </article>
-            <article class="panel panel-card">
-              <h3>Teams that want execution</h3>
-              <p>Not another layer of process, meetings, and status theater.</p>
-            </article>
-          </div>
-        </section>
 
-        <section class="section section-contrast container">
-          <div class="section-heading">
-            <p class="eyebrow">SERVICES THAT MOVE FROM BOTTLENECK TO BUILD</p>
-            <h2>We help you diagnose the problem, build the right system, and get it into actual use.</h2>
+            <article class="product-card featured">
+              <div class="product-badge">Most Popular</div>
+              <div class="product-icon">🚀</div>
+              <h3>MSP Onboarding Hub</h3>
+              <p>Structured client onboarding for managed service providers. White-label, AI-assisted task expansion.</p>
+              <div class="product-price">From <strong>$49</strong>/mo</div>
+              <a href="https://msp.helionforge.com/pricing.html" class="btn btn-primary btn-sm">Try Free →</a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-icon">📝</div>
+              <h3>SOW Copilot</h3>
+              <p>Turn scope notes into professional proposals in 2 minutes. Deliverables, exclusions, pricing — all generated.</p>
+              <div class="product-price">From <strong>$49</strong>/mo</div>
+              <a href="https://sow.helionforge.com/pricing.html" class="btn btn-primary btn-sm">Try Free →</a>
+            </article>
+
           </div>
+          <p class="text-center" style="margin-top:2rem;">
+            <a href="#contact" class="text-link">Need something custom? Let's talk →</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-panel">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Live Products</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">14</div>
+                <div class="stat-label">Day Free Trial</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">$0</div>
+                <div class="stat-label">To Start</div>
+              </div>
+            </div>
+            <p class="stats-trust">Built for agencies and MSPs who need tools that work today, not roadmaps that ship next year.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section" id="services">
+        <div class="container">
+          <p class="eyebrow text-center">CUSTOM BUILDS</p>
+          <h2 class="section-h2 text-center">Need something bespoke? We build that too.</h2>
           <div class="service-grid">
-            <article class="panel panel-card service-card">
-              <p class="service-index">01</p>
-              <h3>Internal tools that remove drag</h3>
-              <p>
-                Custom systems for quoting, approvals, intake, reporting, dashboards, client operations,
-                and back-office workflows — so your team spends less time fighting process.
-              </p>
-              <a href="#contact">Build my internal system</a>
+            <article class="service-card">
+              <div class="service-num">01</div>
+              <h3>Internal Tools</h3>
+              <p>Quoting, approvals, intake, dashboards — custom systems that remove drag from your operations.</p>
             </article>
-            <article class="panel panel-card service-card">
-              <p class="service-index">02</p>
-              <h3>AI that supports the work, not the hype</h3>
-              <p>
-                Practical AI workflows for research, drafting, triage, knowledge access, and repetitive
-                operational tasks. Useful first. Fancy later.
-              </p>
-              <a href="#contact">Explore AI workflows</a>
+            <article class="service-card">
+              <div class="service-num">02</div>
+              <h3>AI Workflows</h3>
+              <p>Practical AI for research, drafting, triage, and repetitive tasks. Useful first. Fancy later.</p>
             </article>
-            <article class="panel panel-card service-card">
-              <p class="service-index">03</p>
-              <h3>Launchable MVPs with product discipline</h3>
-              <p>
-                Tight, testable software for product ideas worth learning from — enough to win early users
-                and decide what deserves full investment.
-              </p>
-              <a href="#contact">Scope an MVP</a>
+            <article class="service-card">
+              <div class="service-num">03</div>
+              <h3>Launchable MVPs</h3>
+              <p>Tight, testable software for product ideas worth learning from — fast enough to validate, clean enough to scale.</p>
             </article>
           </div>
-        </section>
+          <p class="text-center" style="margin-top:2.5rem;">
+            <a href="#contact" class="btn btn-outline">Book a scoping call →</a>
+          </p>
+        </div>
+      </section>
 
-        <section class="section container">
-          <div class="section-heading">
-            <p class="eyebrow">SIMPLE WAYS TO ENGAGE</p>
-            <h2>Three engagement paths, depending on whether the problem is urgent, structural, or product-shaped.</h2>
+      <!-- PROCESS -->
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <p class="eyebrow text-center">HOW WE WORK</p>
+          <h2 class="section-h2 text-center">Clear systems. Fast iterations. Real output.</h2>
+          <div class="process-grid">
+            <div class="process-step">
+              <span class="process-num">01</span>
+              <h3>Diagnose</h3>
+              <p>Get clear on where time, money, and momentum are being lost.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-num">02</span>
+              <h3>Scope</h3>
+              <p>Define the fastest path to something valuable and usable.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-num">03</span>
+              <h3>Build</h3>
+              <p>Execute with speed, stay close to the problem, ship clean code.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-num">04</span>
+              <h3>Extend</h3>
+              <p>Once the system proves itself, improve it, expand it, or productize it.</p>
+            </div>
           </div>
-          <div class="package-grid">
-            <article class="panel panel-card package-card">
-              <span class="package-tag">BEST FOR URGENT BOTTLENECKS</span>
-              <h3>Forge Sprint</h3>
-              <p>
-                A focused build sprint to solve one meaningful operational problem fast. Ideal when you know
-                the pain point and need a sharp team to turn it into a working system.
-              </p>
-              <ul>
-                <li>Rapid discovery and scope definition</li>
-                <li>One high-priority workflow or tool</li>
-                <li>Working implementation</li>
-                <li>Handoff notes and next-step recommendations</li>
-              </ul>
-            </article>
-            <article class="panel panel-card package-card featured">
-              <span class="package-tag">BEST FOR STRUCTURAL OPS PAIN</span>
-              <h3>Forge System</h3>
-              <p>
-                A larger engagement to design and build a durable internal system across multiple workflows.
-                Best when the bottleneck is structural, not isolated.
-              </p>
-              <ul>
-                <li>Workflow mapping and system design</li>
-                <li>Core feature set across key operations</li>
-                <li>Automation and integrations where needed</li>
-                <li>Launch support and iteration planning</li>
-              </ul>
-            </article>
-            <article class="panel panel-card package-card">
-              <span class="package-tag">BEST FOR PRODUCT VALIDATION</span>
-              <h3>Forge Venture</h3>
-              <p>
-                A product-focused engagement for taking an idea from concept to usable MVP. Technical execution
-                paired with product judgment, without wasting cycles.
-              </p>
-              <ul>
-                <li>Product scoping and prioritization</li>
-                <li>MVP UX and core build</li>
-                <li>Launch-ready version for pilot users</li>
-                <li>Post-launch learning roadmap</li>
-              </ul>
-            </article>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="section container" id="process">
-          <div class="panel process-panel">
-            <div class="section-heading section-heading-compact">
-              <p class="eyebrow">HOW WE WORK</p>
-              <h2>Clear systems. Fast iterations. Real output.</h2>
-            </div>
-            <div class="process-grid">
-              <article>
-                <span>01</span>
-                <h3>Diagnose the bottleneck</h3>
-                <p>Get clear on where time, money, and momentum are being lost.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <h3>Scope the smallest useful build</h3>
-                <p>Define the fastest path to something valuable and usable.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <h3>Build and ship</h3>
-                <p>Execute with speed, stay close to the problem, and avoid unnecessary complexity.</p>
-              </article>
-              <article>
-                <span>04</span>
-                <h3>Extend what works</h3>
-                <p>Once the system proves itself, improve it, expand it, or productize it.</p>
-              </article>
-            </div>
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container contact-wrap">
+          <div class="contact-copy">
+            <p class="eyebrow">LET'S BUILD SOMETHING USEFUL</p>
+            <h2 class="section-h2">If a workflow is slowing your team down, let's fix it.</h2>
+            <p class="contact-sub">Tell us what's messy, manual, or breaking. We'll help you turn it into something usable.</p>
+            <ul class="contact-bullets">
+              <li>✓ Response within 1 business day</li>
+              <li>✓ No obligation scoping call</li>
+              <li>✓ Builder-led, not sales-led</li>
+            </ul>
           </div>
-        </section>
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="cf-name">Your name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email address</label>
+                <input type="email" id="cf-email" name="email" placeholder="jane@yourcompany.com" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-message">What do you need?</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Tell us about your workflow problem or the tool you need..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="cf-submit">Send Message</button>
+              <div id="cf-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
 
-        <section class="section section-contrast container">
-          <div class="two-column">
-            <div>
-              <p class="eyebrow">WHY HELION FORGE</p>
-              <h2>Built by people who care about usefulness.</h2>
-              <p class="lede">
-                Most firms either oversell strategy or disappear into implementation details. Helion Forge sits
-                in the middle: product-minded enough to choose the right thing, technical enough to build it
-                properly, and pragmatic enough to keep momentum.
-              </p>
-            </div>
-            <div class="panel panel-inner proof-list">
-              <ul>
-                <li>Builder-first, not agency-first</li>
-                <li>Fast decisions, low ceremony</li>
-                <li>Strong bias toward shipping</li>
-                <li>Designed for practical ROI</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+    </main>
 
-        <section class="section container">
-          <div class="product-angle panel panel-card">
-            <p class="eyebrow">SERVICES TODAY. PRODUCTS TOMORROW.</p>
-            <div class="two-column two-column-tight">
-              <h2>Client work is where the repeatable systems reveal themselves.</h2>
-              <p>
-                We pay attention to recurring problems, reusable patterns, and systems that can evolve into
-                standalone products. Every engagement benefits from product thinking from day one.
-              </p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">⚡ HELION FORGE</div>
+            <p class="footer-tagline">Practical software for teams that need traction.</p>
+            <div class="footer-social">
+              <a href="https://x.com/HelionForge" target="_blank" rel="noopener">𝕏 @HelionForge</a>
+              <a href="https://instagram.com/helionforge" target="_blank" rel="noopener">📸 @helionforge</a>
             </div>
           </div>
-        </section>
+          <div class="footer-col">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="https://app.helionforge.com">Client Reporting Copilot</a></li>
+              <li><a href="https://msp.helionforge.com">MSP Onboarding Hub</a></li>
+              <li><a href="https://sow.helionforge.com">SOW Copilot</a></li>
+              <li><a href="https://portal.helionforge.com">Client Portal</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/products.html">All Products</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="mailto:hello@helionforge.com">hello@helionforge.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Helion Industries, LLC. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
 
-        <section class="section container" id="products">
-          <div class="section-header">
-            <p class="eyebrow">WHAT WE BUILD</p>
-            <h2>Software that earns its keep.</h2>
-            <p class="section-sub">SaaS tools shipping today. Managed services for MSPs. Custom solutions for problems your off-the-shelf stack can't solve.</p>
-          </div>
-          <div class="value-grid">
-            <div>
-              <strong>Client Reporting Copilot</strong>
-              <span>AI-powered reports your clients actually read. Live now.</span>
-            </div>
-            <div>
-              <strong>MSP Onboarding Hub</strong>
-              <span>Structured onboarding workflows for managed service providers. Live now.</span>
-            </div>
-            <div>
-              <strong>Custom Solutions</strong>
-              <span>Scoped tight, shipped fast. Internal tools, MVPs, AI workflows.</span>
-            </div>
-          </div>
-          <div style="margin-top: 2.5rem; text-align: center;">
-            <a class="button button-primary" href="/products.html">See all products &amp; services</a>
-          </div>
-        </section>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('cf-submit');
+        const status = document.getElementById('cf-status');
+        const name = document.getElementById('cf-name').value.trim();
+        const email = document.getElementById('cf-email').value.trim();
+        const message = document.getElementById('cf-message').value.trim();
 
-        <section class="section container" id="contact">
-          <div class="panel cta-panel">
-            <div>
-              <p class="eyebrow">LET’S FIX THE BOTTLENECK</p>
-              <h2>If a workflow is slowing your team down, let’s fix it.</h2>
-              <p>
-                Tell us what’s messy, manual, or breaking. We’ll help you turn it into something usable.
-              </p>
-            </div>
-            <div class="cta-actions">
-              <a class="button button-primary" href="mailto:hello@helionforge.com?subject=Helion%20Forge%20build%20call">Book a build call</a>
-              <a class="button button-secondary" href="mailto:hello@helionforge.com?subject=Helion%20Forge%20project%20inquiry">Send us the problem</a>
-            </div>
-            <p class="cta-note">Practical builders. Sharp systems. Software that earns its keep.</p>
-          </div>
-        </section>
-      </main>
-    </div>
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        status.textContent = '';
+        status.className = 'form-status';
+
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
+          });
+          if (res.ok) {
+            status.textContent = "✓ Thanks! We'll be in touch within 1 business day.";
+            status.className = 'form-status success';
+            this.reset();
+          } else {
+            throw new Error('Server error');
+          }
+        } catch(err) {
+          status.innerHTML = 'Something went wrong. <a href="mailto:hello@helionforge.com">Email us directly →</a>';
+          status.className = 'form-status error';
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        }
+      });
+    </script>
   </body>
 </html>

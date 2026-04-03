@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Ready — Helion Forge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root { --orange: #F97316; --bg: #0F0F0F; --surface: #181818; --border: #2A2A2A; --text: #FAFAF9; --muted: #A8A29E; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    .container { max-width: 600px; margin: 0 auto; padding: 0 24px; }
+    nav { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    nav .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--orange); text-decoration: none; letter-spacing: 0.05em; }
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 48px 40px; text-align: center; max-width: 520px; width: 100%; }
+    .icon { font-size: 3rem; margin-bottom: 20px; }
+    h1 { font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem; font-weight: 700; margin-bottom: 12px; }
+    p { color: var(--muted); margin-bottom: 32px; line-height: 1.7; }
+    .btn { display: inline-block; background: var(--orange); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; border: none; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .btn:hover { background: #ea6a0e; }
+    .sub { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
+    .loading { color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--orange); text-decoration: none; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="/">⚡ HELION FORGE</a>
+  </div>
+</nav>
+
+<main>
+  <div class="card" id="card">
+    <div class="icon">⏳</div>
+    <h1>Confirming payment...</h1>
+    <p class="loading">Please wait while we verify your purchase.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Questions? <a href="mailto:hello@helionforge.com">hello@helionforge.com</a></p>
+  </div>
+</footer>
+
+<script>
+(async () => {
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get('session_id');
+  const card = document.getElementById('card');
+
+  if (!sessionId) {
+    card.innerHTML = '<div class="icon">⚠️</div><h1>Invalid link</h1><p>No session ID found. If you just completed a purchase, please check your email or <a href="mailto:hello@helionforge.com" style="color:#F97316;">contact support</a>.</p>';
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/store/session-status?session_id=' + encodeURIComponent(sessionId));
+    const data = await res.json();
+
+    if (data.paid && data.download_token) {
+      card.innerHTML = `
+        <div class="icon">✅</div>
+        <h1>Thank you for your purchase!</h1>
+        <p>Your MSP New Client Onboarding System bundle is ready. Click below to download your ZIP file containing all 7 documents in PDF + DOCX formats.</p>
+        <a class="btn" href="/api/download/msp-bundle?token=${encodeURIComponent(data.download_token)}" download>Download Bundle (PDF + DOCX)</a>
+        <span class="sub">Save this page — your download link is permanent.</span>
+        <span class="sub" style="margin-top:8px;">A receipt has been sent to ${data.email ? `<strong>${data.email}</strong>` : 'your email'}.</span>
+      `;
+    } else {
+      card.innerHTML = `
+        <div class="icon">⏳</div>
+        <h1>Payment not confirmed yet</h1>
+        <p>Your payment may still be processing. Please wait a moment and refresh, or <a href="mailto:hello@helionforge.com" style="color:#F97316;">contact support</a> if this persists.</p>
+        <button class="btn" onclick="window.location.reload()">Refresh</button>
+      `;
+    }
+  } catch (e) {
+    card.innerHTML = `
+      <div class="icon">⚠️</div>
+      <h1>Something went wrong</h1>
+      <p>We couldn't confirm your payment right now. Please <a href="mailto:hello@helionforge.com" style="color:#F97316;">contact support</a> with your order details and we'll get you sorted immediately.</p>
+    `;
+  }
+})();
+</script>
+</body>
+</html>

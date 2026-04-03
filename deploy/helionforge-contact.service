@@ -1,0 +1,15 @@
+[Unit]
+Description=Helion Forge Contact API
+After=network.target
+
+[Service]
+Type=simple
+User=openclaw
+WorkingDirectory=/opt/openclaw/.openclaw/workspace/helionforge-site
+ExecStart=/usr/bin/env node /opt/openclaw/.openclaw/workspace/helionforge-site/contact-server.js
+Restart=always
+RestartSec=5
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

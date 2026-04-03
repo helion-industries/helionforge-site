@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSP New Client Onboarding System — Helion Forge</title>
+  <meta name="description" content="7 ready-to-use documents covering the full MSP new client onboarding lifecycle. PDF + DOCX. $29 one-time purchase." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root {
+      --orange: #F97316;
+      --orange-dim: rgba(249,115,22,0.12);
+      --bg: #0F0F0F;
+      --surface: #181818;
+      --border: #2A2A2A;
+      --text: #FAFAF9;
+      --muted: #A8A29E;
+      --charcoal: #1C1917;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    nav .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--orange); text-decoration: none; letter-spacing: 0.05em; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 24px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero { padding: 72px 0 56px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--orange-dim); color: var(--orange); border: 1px solid rgba(249,115,22,0.3); border-radius: 999px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 14px; margin-bottom: 24px; }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; line-height: 1.15; max-width: 720px; margin: 0 auto 20px; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 36px; }
+    .price-badge { font-size: 1rem; color: var(--muted); margin-bottom: 24px; }
+    .price-badge strong { color: var(--text); font-size: 1.5rem; }
+
+    .btn-primary { display: inline-block; background: var(--orange); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; border: none; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+    .btn-primary:hover { background: #ea6a0e; transform: translateY(-1px); }
+    .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .btn-sub { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+
+    /* PAIN */
+    .section { padding: 64px 0; border-top: 1px solid var(--border); }
+    .section-label { display: inline-flex; align-items: center; gap: 6px; background: var(--orange-dim); color: var(--orange); border: 1px solid rgba(249,115,22,0.3); border-radius: 999px; font-size: 0.73rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 12px; margin-bottom: 16px; }
+    .section h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; margin-bottom: 16px; }
+    .section > .container > p { color: var(--muted); max-width: 640px; margin-bottom: 40px; line-height: 1.75; }
+
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .pain-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .pain-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+    .pain-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    /* WHAT'S INCLUDED */
+    .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+    .doc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; display: flex; gap: 16px; align-items: flex-start; }
+    .doc-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .doc-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .doc-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* FORMAT */
+    .format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 600px) { .format-grid { grid-template-columns: 1fr; } }
+    .format-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .format-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .format-card h3 span { color: var(--orange); }
+    .format-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; }
+    .faq-a { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    /* BOTTOM CTA */
+    .cta-section { padding: 72px 0; text-align: center; }
+    .cta-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; margin-bottom: 16px; }
+    .cta-section p { color: var(--muted); margin-bottom: 32px; font-size: 1rem; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--orange); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="/">⚡ HELION FORGE</a>
+    <div class="nav-links">
+      <a href="/products.html">Products</a>
+      <a href="https://app.helionforge.com">Reporting Copilot</a>
+      <a href="https://msp.helionforge.com">Onboarding Hub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">📦 Digital Download</div>
+    <h1>Your MSP Onboarding Process Should Be a System, Not a Prayer</h1>
+    <p>7 ready-to-use documents that take every new client from signed contract to 90-day relationship — consistently, professionally, every time.</p>
+    <div class="price-badge"><strong>$29</strong> &mdash; One-time purchase. Instant download.</div>
+    <button class="btn-primary" id="buy-btn">Download Now — $29</button>
+    <span class="btn-sub">PDF + DOCX &bull; Instant delivery &bull; No subscription</span>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2>What happens when onboarding lives in someone's head</h2>
+    <p>Every MSP we've talked to has a version of the same story. A new client signs. Someone sends a welcome email — or forgets to. A technician shows up for the first site visit without a clear checklist. Ninety days later, the client isn't sure they made the right call.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <h3>Inconsistent first impressions</h3>
+        <p>Every client should get the same professional, organized start — not a different experience depending on who handled the sale.</p>
+      </div>
+      <div class="pain-card">
+        <h3>Missed steps that become problems later</h3>
+        <p>Skipped network documentation. Credentials collected over text. Security hardening deferred. These gaps cost time, trust, and clients.</p>
+      </div>
+      <div class="pain-card">
+        <h3>Sales-to-service handoff failures</h3>
+        <p>When service doesn't know what sales promised, someone pays for it. Usually the client — and then you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">What's Included</div>
+    <h2>7 Documents. Complete Onboarding Coverage.</h2>
+    <div class="docs-grid">
+      <div class="doc-card">
+        <div class="doc-icon">📧</div>
+        <div>
+          <h3>Welcome Email Template</h3>
+          <p>Send the day the contract is signed. Sets expectations, communicates next steps, makes your client feel like they made the right call.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🔍</div>
+        <div>
+          <h3>Network Discovery Checklist</h3>
+          <p>Your technician's guide for the first site visit. Hardware, software, network topology — walk in with a plan, walk out with data.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🔐</div>
+        <div>
+          <h3>Credential Intake Form</h3>
+          <p>Stop gathering passwords over email and text. Structured form captures every credential you'll need — organized and ready to hand off.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🖥️</div>
+        <div>
+          <h3>RMM Deployment Checklist</h3>
+          <p>Step-by-step instructions for deploying your RMM agent, validating it's working, and confirming every endpoint is covered.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🛡️</div>
+        <div>
+          <h3>Security Baseline Checklist</h3>
+          <p>30 days of week-by-week hardening milestones. Security happens systematically, not whenever someone remembers.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🤝</div>
+        <div>
+          <h3>Internal Handoff SOP</h3>
+          <p>Sales → Service handoff from signed contract to first service call. Kills the "nobody told me" problem before it starts.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📅</div>
+        <div>
+          <h3>30/60/90 Day Check-in Templates</h3>
+          <p>Three email templates timed at 30, 60, and 90 days post-onboarding. Stay in front of clients through the first three months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Format</div>
+    <h2>PDF + DOCX. Use it today, own it forever.</h2>
+    <div class="format-grid">
+      <div class="format-card">
+        <h3><span>PDF</span> — Ready to use immediately</h3>
+        <p>Clean, professionally formatted, designed to be handed directly to clients or used as-is by your team. No editing required.</p>
+      </div>
+      <div class="format-card">
+        <h3><span>DOCX</span> — Fully editable</h3>
+        <p>Open in Word or Google Docs and customize with your company name, logo, and workflow specifics. Works in Notion, Confluence, IT Glue, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Frequently Asked Questions</h2>
+    <div style="margin-top:32px;">
+      <div class="faq-item">
+        <div class="faq-q">Can I customize these documents with my company's branding?</div>
+        <div class="faq-a">Yes — that's exactly what the DOCX files are for. Open in Word or Google Docs, swap in your logo and company name, and they're yours. The PDFs are clean and ready to use as-is.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What tools does this work with?</div>
+        <div class="faq-a">The DOCX files work with Microsoft Word, Google Docs, Notion (import as document), Confluence, IT Glue, and any platform that accepts standard Word documents. PDFs work everywhere.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is this a one-time purchase?</div>
+        <div class="faq-a">Yes. $29, one time. No subscription, no per-seat licensing. Download once, use forever.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if my onboarding process is different from what's here?</div>
+        <div class="faq-a">These are built to be starting points, not straitjackets. The DOCX format lets you add, remove, or reorder anything. Most MSPs can adapt the full bundle in an afternoon.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Stop improvising.<br>Start onboarding like a real MSP.</h2>
+    <p>$29 gets you 7 documents, two formats, and a process that works the same way every time.</p>
+    <button class="btn-primary" id="buy-btn-2">Download Now — $29</button>
+    <span class="btn-sub">Instant download &bull; PDF + DOCX &bull; One-time purchase</span>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>By <a href="https://helionforge.com">Helion Forge</a> — Where intelligence builds.</p>
+  </div>
+</footer>
+
+<script>
+async function startCheckout() {
+  const btns = document.querySelectorAll('#buy-btn, #buy-btn-2');
+  btns.forEach(b => { b.textContent = 'Loading...'; b.disabled = true; });
+  try {
+    const res = await fetch('/api/store/checkout/msp-bundle', { method: 'POST' });
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      throw new Error(data.error || 'No URL returned');
+    }
+  } catch (e) {
+    btns.forEach(b => { b.textContent = 'Download Now — $29'; b.disabled = false; });
+    alert('Something went wrong. Please try again or contact hello@helionforge.com');
+  }
+}
+document.getElementById('buy-btn').addEventListener('click', startCheckout);
+document.getElementById('buy-btn-2').addEventListener('click', startCheckout);
+</script>
+</body>
+</html>

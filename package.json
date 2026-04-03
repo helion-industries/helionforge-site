@@ -1,0 +1,12 @@
+{
+  "name": "helionforge-site",
+  "version": "1.0.0",
+  "private": true,
+  "main": "contact-server.js",
+  "scripts": {
+    "start": "node contact-server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
