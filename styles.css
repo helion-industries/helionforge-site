@@ -104,6 +104,20 @@ a {
   color: var(--text);
 }
 
+.nav-login-btn {
+  padding: 6px 16px;
+  background: #F97316;
+  color: #fff !important;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+.nav-login-btn:hover {
+  background: #ea6d10 !important;
+  color: #fff !important;
+}
+
 .panel {
   position: relative;
   border: 1px solid var(--border);
