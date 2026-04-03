@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2200" width="1440" height="2200">
+  <defs>
+    <linearGradient id="heroGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17181B"/>
+      <stop offset="100%" stop-color="#0E0E10"/>
+    </linearGradient>
+    <radialGradient id="orangeGlow" cx="80%" cy="20%" r="45%">
+      <stop offset="0%" stop-color="#F36A21" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#F36A21" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#F36A21" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A2C31" stroke-width="1" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1440" height="2200" fill="#0E0E10"/>
+  <rect width="1440" height="700" fill="url(#heroGlow)"/>
+  <rect width="1440" height="700" fill="url(#orangeGlow)"/>
+  <rect width="1440" height="2200" fill="url(#grid)" opacity="0.35"/>
+
+  <!-- Top nav -->
+  <line x1="80" y1="90" x2="1360" y2="90" stroke="#2A2C31" stroke-width="1"/>
+  <text x="100" y="65" fill="#E7E1D8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">HELION FORGE</text>
+  <text x="1140" y="65" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="16">Services</text>
+  <text x="1230" y="65" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="16">Products</text>
+  <text x="1320" y="65" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="16">Contact</text>
+
+  <!-- Hero -->
+  <rect x="90" y="150" width="1260" height="470" rx="18" fill="#121316" stroke="#2A2C31" stroke-width="1.5"/>
+  <text x="140" y="225" fill="#F36A21" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4">AI SYSTEMS · SOFTWARE · EXECUTION</text>
+  <text x="140" y="320" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="72" font-weight="700">Where intelligence</text>
+  <text x="140" y="395" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="72" font-weight="700">builds.</text>
+  <text x="140" y="465" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="24">We build AI-powered systems, internal tools, and products for founders who care more</text>
+  <text x="140" y="500" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="24">about shipping than theater.</text>
+  <rect x="140" y="540" width="220" height="56" rx="10" fill="#F36A21"/>
+  <text x="182" y="576" fill="#0E0E10" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Start a project</text>
+  <rect x="380" y="540" width="210" height="56" rx="10" fill="none" stroke="#3A3D43" stroke-width="2"/>
+  <text x="430" y="576" fill="#E7E1D8" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600">See how we work</text>
+
+  <!-- Hero side panel -->
+  <rect x="930" y="210" width="340" height="300" rx="14" fill="#17181B" stroke="#2F3137" stroke-width="1.5"/>
+  <text x="960" y="252" fill="#F36A21" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3">BUILD PROFILE</text>
+  <text x="960" y="300" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="28" font-weight="700">Practical. Fast.</text>
+  <text x="960" y="336" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="28" font-weight="700">Systematic.</text>
+  <line x1="960" y1="365" x2="1240" y2="365" stroke="#33363C" stroke-width="1"/>
+  <text x="960" y="405" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="18">• AI workflow automation</text>
+  <text x="960" y="438" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="18">• Internal tools and MVP builds</text>
+  <text x="960" y="471" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="18">• Product experiments in parallel</text>
+
+  <!-- Capability section -->
+  <text x="100" y="790" fill="#F36A21" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">WHAT WE BUILD</text>
+  <text x="100" y="860" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="48" font-weight="700">Built for operators, not spectators.</text>
+
+  <rect x="100" y="920" width="390" height="250" rx="16" fill="#17181B" stroke="#2F3137" stroke-width="1.5"/>
+  <text x="130" y="980" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="28" font-weight="700">Automation Systems</text>
+  <text x="130" y="1030" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="20">Replace repetitive human work with</text>
+  <text x="130" y="1060" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="20">practical AI flows and clean ops.</text>
+
+  <rect x="525" y="920" width="390" height="250" rx="16" fill="#17181B" stroke="#2F3137" stroke-width="1.5"/>
+  <text x="555" y="980" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="28" font-weight="700">Internal Tools</text>
+  <text x="555" y="1030" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="20">Node, Express, auth, dashboards,</text>
+  <text x="555" y="1060" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="20">admin flows, and operator UX.</text>
+
+  <rect x="950" y="920" width="390" height="250" rx="16" fill="#17181B" stroke="#2F3137" stroke-width="1.5"/>
+  <text x="980" y="980" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="28" font-weight="700">Micro-SaaS Builds</text>
+  <text x="980" y="1030" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="20">Focused products with fast build cycles</text>
+  <text x="980" y="1060" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="20">and direct paths to revenue.</text>
+
+  <!-- Process section -->
+  <rect x="100" y="1260" width="1240" height="320" rx="18" fill="#121316" stroke="#2A2C31" stroke-width="1.5"/>
+  <text x="140" y="1330" fill="#F36A21" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">HOW WE WORK</text>
+  <text x="140" y="1390" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="44" font-weight="700">Clear systems. Fast iterations. Real output.</text>
+  <text x="140" y="1460" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="22">1. Define the outcome</text>
+  <text x="480" y="1460" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="22">2. Build the system</text>
+  <text x="820" y="1460" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="22">3. Tighten and ship</text>
+  <line x1="140" y1="1490" x2="1240" y2="1490" stroke="#2F3137" stroke-width="1"/>
+  <text x="140" y="1540" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="19">We structure work like operators: scope it, isolate it, execute it, and review it.</text>
+
+  <!-- CTA/footer block -->
+  <rect x="100" y="1690" width="1240" height="300" rx="18" fill="#17181B" stroke="#2F3137" stroke-width="1.5"/>
+  <text x="140" y="1770" fill="#E7E1D8" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="52" font-weight="700">Need something built?</text>
+  <text x="140" y="1830" fill="#B6AEA3" font-family="Inter, Arial, sans-serif" font-size="24">Helion Forge builds practical AI systems, products, and internal tools that move work forward.</text>
+  <rect x="140" y="1880" width="240" height="58" rx="10" fill="#F36A21"/>
+  <text x="192" y="1918" fill="#0E0E10" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Book an intro</text>
+  <rect x="400" y="1880" width="240" height="58" rx="10" fill="none" stroke="#444851" stroke-width="2"/>
+  <text x="458" y="1918" fill="#E7E1D8" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600">View services</text>
+
+  <!-- subtle orange details -->
+  <circle cx="1240" cy="250" r="4" fill="#FF8A3D"/>
+  <circle cx="1268" cy="235" r="3" fill="#FF8A3D" opacity="0.75"/>
+  <circle cx="1290" cy="220" r="2.5" fill="#FF8A3D" opacity="0.55"/>
+</svg>
