@@ -422,3 +422,160 @@ h3 {
     font-size: clamp(1.9rem, 9vw, 2.8rem);
   }
 }
+
+/* ============================================
+   POLISH PASS — 2026-04-03 v2
+   ============================================ */
+
+/* Restore grid background from original */
+body {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(243, 106, 33, 0.12), rgba(243, 106, 33, 0) 28%),
+    linear-gradient(180deg, #121317 0%, var(--bg) 30%, var(--bg) 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.site-header,
+main,
+footer { position: relative; z-index: 1; }
+
+/* Tighten hero */
+.hero-section { padding: 110px 0 90px; }
+.hero-headline { margin-bottom: 22px; }
+.hero-sub { margin-bottom: 36px; font-size: 17px; }
+
+/* Stat chips — no emoji, clean text with dot separator */
+.stat-chips {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.stat-chips span {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0 16px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted-deep);
+  letter-spacing: 0.02em;
+}
+.stat-chips span:not(:last-child)::after {
+  content: "·";
+  margin-left: 16px;
+  color: var(--border-strong);
+}
+.stat-chips span:first-child { padding-left: 0; }
+
+/* Product cards — add top accent line, remove emoji */
+.product-card {
+  border-top: 3px solid transparent;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+}
+.product-card.featured {
+  border-top-color: var(--accent);
+}
+.product-card:not(.featured):hover {
+  border-top-color: var(--accent);
+}
+
+/* Product tag (replaces emoji icon) */
+.product-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(243, 106, 33, 0.08);
+  border: 1px solid rgba(243, 106, 33, 0.2);
+  border-radius: 6px;
+  padding: 3px 10px;
+  margin-bottom: 4px;
+}
+
+/* Product price — more prominent */
+.product-price {
+  font-size: 13px;
+  color: var(--muted-deep);
+  letter-spacing: 0.01em;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+.product-price strong {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Section headings — tighter */
+.section-h2 { margin-bottom: 48px; }
+
+/* Stats panel — glass effect */
+.stats-panel {
+  background: rgba(23, 24, 27, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.stat-number { font-size: 56px; color: var(--accent); }
+
+/* Service cards — hover lift */
+.service-card {
+  transition: border-color 0.2s, transform 0.2s;
+  border-left: 3px solid transparent;
+}
+.service-card:hover {
+  border-left-color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* Process — cleaner numbering */
+.process-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(243, 106, 33, 0.25);
+  margin-bottom: 8px;
+  display: block;
+  line-height: 1;
+}
+.process-step h3 { font-size: 15px; letter-spacing: 0.01em; }
+
+/* Contact section — more breathing room */
+.contact-wrap { gap: 80px; padding: 20px 0; }
+.contact-form-wrap {
+  background: rgba(23, 24, 27, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.contact-copy .section-h2 { margin-bottom: 12px; }
+.contact-bullets li {
+  font-size: 15px;
+  color: var(--muted);
+  padding: 2px 0;
+}
+
+/* Section separator */
+.section { border-top: 1px solid var(--border); }
+.section:first-child { border-top: none; }
+.hero-section { border-top: none; }
